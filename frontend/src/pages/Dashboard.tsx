@@ -6,10 +6,10 @@ import { useAuth } from '../hooks/useAuth';
 
 function getGreeting() {
   const h = new Date().getHours();
-  if (h >= 5  && h < 12) return 'Good morning';
-  if (h >= 12 && h < 17) return 'Good afternoon';
-  if (h >= 17 && h < 21) return 'Good evening';
-  return 'Good night';
+  if (h >= 5  && h < 12) return 'Good morning ☀️';
+  if (h >= 12 && h < 17) return 'Good afternoon 🌤️';
+  if (h >= 17 && h < 21) return 'Good evening 🌆';
+  return 'Good night 🌙';
 }
 
 const STAT_STYLES = [
@@ -66,9 +66,9 @@ export default function Dashboard() {
 
   const cards = [
     { label: 'Total books',     value: stats?.totalBooks    ?? 0, hint: 'in catalogue' },
-    { label: 'Active members',  value: stats?.totalMembers  ?? 0, hint: 'enrolled' },
+    { label: 'Active members',  value: stats?.totalMembers  ?? 0, hint: 'enrolled students & staff' },
     { label: 'Books out',       value: stats?.activeBorrows ?? 0, hint: 'currently borrowed' },
-    { label: 'Overdue',         value: stats?.overdueBorrows?? 0, hint: 'past due date' },
+    { label: 'Overdue',         value: stats?.overdueBorrows?? 0, hint: 'require immediate attention' },
   ];
 
   const roleDisplay =
@@ -114,7 +114,7 @@ export default function Dashboard() {
             {getGreeting()}, {user?.name?.split(' ')[0]} 👋
           </h1>
           <p style={{ fontSize: 13.5, color: 'rgba(199,210,254,0.85)', marginTop: 4 }}>
-            Here's what's happening at the library today.
+            Welcome to your library dashboard. Here's today's overview.
           </p>
         </div>
 

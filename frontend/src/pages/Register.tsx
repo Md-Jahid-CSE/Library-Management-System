@@ -27,12 +27,14 @@ export default function Register() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); setError(''); setSuccess('');
-    if (form.password !== form.confirm_password) { setError('Passwords do not match.'); return; }
-    if (form.password.length < 6) { setError('Password must be at least 6 characters.'); return; }
+    if (form.password !== form.confirm_password) { setError('Passwords do not match. Please re-enter.'); return; }
+    if (form.password.length < 6) { setError('Password must be at least 6 characters long.'); return; }
+    if (!form.name.trim()) { setError('Full name is required.'); return; }
+    if (!form.email.trim()) { setError('Email address is required.'); return; }
     setLoading(true);
     try {
       await api.post('/auth/register', form);
-      setSuccess('Account created. Please wait for librarian approval — redirecting to sign in.');
+      setSuccess('Account created successfully! Please wait for librarian approval — redirecting to sign in page.');
       setTimeout(() => navigate('/login'), 3000);
     } catch (e: any) { setError(e.response?.data?.message || 'Registration failed. Please try again.'); }
     finally { setLoading(false); }
