@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import { login, register, createAssistant, forgotPassword, verifyResetCode, resetPassword } from '../controllers/authController';
+import { authenticate, authorize } from '../middleware/auth';
+const r = Router();
+r.post('/login', login);
+r.post('/register', register);
+r.post('/forgot-password', forgotPassword);
+r.post('/verify-reset-code', verifyResetCode);
+r.post('/reset-password', resetPassword);
+r.post('/create-assistant', authenticate, authorize('librarian'), createAssistant);
+export default r;

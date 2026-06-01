@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import { getMembers, updateMemberStatus, deleteMember, updateMember, getUsers, deleteUser } from '../controllers/membersController';
+import { authenticate, authorize } from '../middleware/auth';
+const r = Router();
+r.get('/', authenticate, authorize('librarian', 'library_assistant'), getMembers);
+r.put('/:id/status', authenticate, authorize('librarian', 'library_assistant'), updateMemberStatus);
+r.put('/:id', authenticate, authorize('librarian', 'library_assistant'), updateMember);
+r.delete('/:id', authenticate, authorize('librarian'), deleteMember);
+r.get('/users/list', authenticate, authorize('librarian'), getUsers);
+r.delete('/users/:id', authenticate, authorize('librarian'), deleteUser);
+export default r;
