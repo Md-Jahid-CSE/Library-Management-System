@@ -5,12 +5,12 @@ export interface AuthRequest extends Request {
   user?: { id: number; email: string; role: string; userType: string };
 }
 
-export const authenticate = (req: AuthRequest, res: Response, next: NextFunction): void => {
-  const token = req.headers.authorization?.split(' ')[1];
+export const authenticate = (req: Request & { user?: any }, res: Response, next: NextFunction): void => {
+  const token = (req as any).headers.authorization?.split(' ')[1];
   if (!token) { res.status(401).json({ success: false, message: 'No token' }); return; }
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretkey123') as any;
-    req.user = decoded;
+    (req as AuthRequest).user = decoded;
     next();
   } catch {
     res.status(401).json({ success: false, message: 'Invalid token' });
