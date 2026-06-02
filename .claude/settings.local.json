@@ -5,7 +5,19 @@
       "Bash(git -c user.name=\"ashriaalamos\" -c user.email=\"ashriaalamos@users.noreply.github.com\" commit -m \"Member3: Borrows, BorrowRequests, MyBorrows, Announcements pages\")",
       "Bash(git config *)",
       "Bash(git branch *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git ls-tree *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=\"Md-Jahid-CSE\" -c user.email=\"jahid.19th.126@gmail.com\" commit -m \"config: use REACT_APP_API_URL env variable for deployment\")",
+      "Bash(git -c user.name=\"Md-Jahid-CSE\" -c user.email=\"jahid.19th.126@gmail.com\" commit -m \"fix: resolve TypeScript error in auth middleware for deployment\")",
+      "Bash(git -c user.name=\"Md-Jahid-CSE\" -c user.email=\"jahid.19th.126@gmail.com\" commit -m \"fix: add .npmrc for legacy-peer-deps to fix Vercel build\")",
+      "Bash(git -c user.name=\"Md-Jahid-CSE\" -c user.email=\"jahid.19th.126@gmail.com\" commit -m \"fix: add vercel.json to fix permission error in build\")",
+      "Bash(git -c user.name=\"Md-Jahid-CSE\" -c user.email=\"jahid.19th.126@gmail.com\" commit -m \"fix: update CORS to allow Vercel and Render domains\")",
+      "Bash(ls -la \"D:/Project/New folder/\" 2>&1; echo \"==== lms-v2 deliverables ====\"; ls -la \"D:/Project/lms-v2/\"*.docx \"D:/Project/lms-v2/\"*.pptx 2>&1)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(git rm *)",
+      "Bash(git -c user.name=\"Md-Jahid-CSE\" -c user.email=\"jahid.19th.126@gmail.com\" commit -m \"chore: add .gitignore and remove node_modules from tracking\")"
     ]
   }
 }
