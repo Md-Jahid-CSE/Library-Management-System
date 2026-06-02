@@ -80,11 +80,11 @@ export default function Books() {
           <p className="eyebrow" style={{ marginBottom: 6 }}>Catalogue</p>
           <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.4px' }}>Books</h1>
           <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 4 }}>
-            {total.toLocaleString()} {total === 1 ? 'book' : 'books'} in the library
+            {total.toLocaleString()} {total === 1 ? 'book' : 'books'} available in the library catalogue
           </p>
         </div>
         {isStaff && (
-          <button className="btn btn-primary" onClick={openAdd}>Add book</button>
+          <button className="btn btn-primary" onClick={openAdd}>+ Add book</button>
         )}
       </div>
 
