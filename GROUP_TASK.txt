@@ -1,0 +1,107 @@
+========================================
+   LMS PROJECT - GROUP TASK INSTRUCTION
+========================================
+
+GitHub Repo Link:
+https://github.com/Md-Jahid-CSE/Library-Management-System
+
+========================================
+MEMBER 2 - তোমার কাজ:
+Login, ForgotPassword, Members, CreateAssistant
+========================================
+
+STEP 1 - Git install করো (না থাকলে):
+https://git-scm.com/download/win
+Download করো -> সব Next দিয়ে Install করো
+
+STEP 2 - GitHub Account বানাও (না থাকলে):
+https://github.com -> Sign up
+
+STEP 3 - Email check করো:
+GitHub থেকে Invitation mail আসবে
+"Accept invitation" click করো
+
+STEP 4 - Start Menu তে "Git Bash" open করো
+এই commands গুলো একটা একটা করে দাও:
+
+cd Desktop
+git clone https://github.com/Md-Jahid-CSE/Library-Management-System.git
+cd Library-Management-System
+git checkout -b feature/member2
+git config user.name "তোমার নাম লেখো"
+git config user.email "তোমার Gmail লেখো"
+git checkout 4d436d47 -- frontend/src/pages/Login.tsx frontend/src/pages/ForgotPassword.tsx frontend/src/pages/Members.tsx frontend/src/pages/CreateAssistant.tsx
+git add frontend/src/pages/Login.tsx frontend/src/pages/ForgotPassword.tsx frontend/src/pages/Members.tsx frontend/src/pages/CreateAssistant.tsx
+git commit -m "Member2: Login, ForgotPassword, Members, CreateAssistant pages"
+git push origin feature/member2
+
+STEP 5 - Push এর সময় জিজ্ঞেস করলে:
+Username: তোমার GitHub username
+Password: Personal Access Token (নিচে দেখো)
+
+--- Token বানানোর নিয়ম ---
+1. https://github.com এ login করো
+2. উপরে ডানে Profile Picture -> Settings
+3. নিচে scroll করো -> Developer settings
+4. Personal access tokens -> Tokens (classic)
+5. Generate new token (classic)
+6. Note: push token
+7. Expiration: 30 days
+8. "repo" এ tick দাও
+9. Generate token -> Copy করো
+10. Password এর জায়গায় এই token paste করো
+----------------------------
+
+STEP 6 - হয়ে গেলে এই link এ check করো:
+https://github.com/Md-Jahid-CSE/Library-Management-System/branches
+
+
+
+========================================
+MEMBER 3 - তোমার কাজ:
+Borrows, BorrowRequests, MyBorrows, Announcements
+========================================
+
+STEP 1 - Git install করো (না থাকলে):
+https://git-scm.com/download/win
+Download করো -> সব Next দিয়ে Install করো
+
+STEP 2 - GitHub Account বানাও (না থাকলে):
+https://github.com -> Sign up
+
+STEP 3 - Email check করো:
+GitHub থেকে Invitation mail আসবে
+"Accept invitation" click করো
+
+STEP 4 - Start Menu তে "Git Bash" open করো
+এই commands গুলো একটা একটা করে দাও:
+
+cd Desktop
+git clone https://github.com/Md-Jahid-CSE/Library-Management-System.git
+cd Library-Management-System
+git checkout -b feature/member3
+git config user.name "তোমার নাম লেখো"
+git config user.email "তোমার Gmail লেখো"
+git checkout 4d436d47 -- frontend/src/pages/Borrows.tsx frontend/src/pages/BorrowRequests.tsx frontend/src/pages/MyBorrows.tsx frontend/src/pages/Announcements.tsx
+git add frontend/src/pages/Borrows.tsx frontend/src/pages/BorrowRequests.tsx frontend/src/pages/MyBorrows.tsx frontend/src/pages/Announcements.tsx
+git commit -m "Member3: Borrows, BorrowRequests, MyBorrows, Announcements pages"
+git push origin feature/member3
+
+STEP 5 - Push এর সময় জিজ্ঞেস করলে:
+Username: তোমার GitHub username
+Password: Personal Access Token (উপরে দেখো বানানোর নিয়ম)
+
+STEP 6 - হয়ে গেলে এই link এ check করো:
+https://github.com/Md-Jahid-CSE/Library-Management-System/branches
+
+
+
+========================================
+সবার কাজ শেষ হলে Sir এই link এ দেখবেন:
+https://github.com/Md-Jahid-CSE/Library-Management-System/branches
+
+3 টা branch দেখাবে:
+- feature/member1 (Jahid এর কাজ) - DONE
+- feature/member2 (তোমার কাজ)
+- feature/member3 (তোমার কাজ)
+========================================

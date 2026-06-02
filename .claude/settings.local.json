@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout *)",
+      "Bash(git -c user.name=\"ashriaalamos\" -c user.email=\"ashriaalamos@users.noreply.github.com\" commit -m \"Member3: Borrows, BorrowRequests, MyBorrows, Announcements pages\")",
+      "Bash(git config *)",
+      "Bash(git branch *)",
+      "Bash(git push *)"
+    ]
+  }
+}
