@@ -14,20 +14,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: (origin, callback) => {
-    const allowed = [
-      'http://localhost:3000',
-      'http://localhost:3001',
-      /\.vercel\.app$/,
-      /\.onrender\.com$/,
-    ];
-    if (!origin) return callback(null, true);
-    const isAllowed = allowed.some(p => typeof p === 'string' ? p === origin : p.test(origin));
-    callback(isAllowed ? null : new Error('CORS not allowed'), isAllowed);
-  },
-  credentials: true
-}));
+// Allow all origins (reflects the request origin) so every Vercel URL works,
+// including preview deployments whose sub-domain hash changes on each deploy.
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
